@@ -7,7 +7,7 @@ from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
 from flask import Flask, jsonify
 #set up db and tables
-engine = create_engine("sqlite:////C:Users/kivcargo⁩/⁨Documents⁩/⁨SMU_Assignments⁩/Unit_10_SQLalchemy⁩/hawaii.sqlite")
+engine = create_engine("sqlite:///Resources\hawaii.sqlite")
 # reflect an existing database into a new model
 Base = automap_base()
 # reflect the tables
@@ -22,11 +22,11 @@ app= Flask(__name__)
 def origin():
     return(
         'Welcome<br/>'
-        'Precipitation data /api/v1.0/precipitation'
-        'Station data /api/v1.0/stations'
-        'Temperature data /api/v1.0/tobs'
-        'Start date & Years /api/v1.0/<start>'
-        'End date /api/v1.0/<start>/<end>'
+        'Precipitation data /api/v1.0/precipitation<br/>'
+        'Station data /api/v1.0/stations<br/>'
+        'Temperature data /api/v1.0/tobs<br/>'
+        'Start date & Years /api/v1.0/<start><br/>'
+        'End date /api/v1.0/<start>/<end><br/>'
     )
 @app.route('/api/v1.0/precipitation')
 def precipitation():
