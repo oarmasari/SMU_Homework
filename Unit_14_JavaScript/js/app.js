@@ -1,39 +1,50 @@
-// variable for data file 
-var UFO_table = data;
 
-
-// variable to select tbody in html
+// from data.js
+var tableData = data;
 var tbody = d3.select("tbody");
+tableData.forEach((event) => {
+    var row = tbody.append("tr");
+    Object.values(event).forEach((value) => {
+        var cell = row.append("td");
+        cell.text(value);
+    });
+});
+var button = d3.select("button");
+button.on("click", function () {
+    var filterData = tableData
+    var input = d3.select("#datetime").property("value");
+    if (input !== ""){
+        var filterData = filterData.filter(data => data.datetime === input);
+    };
+    var input = d3.select("#city").property("value").toLowerCase();
+    if (input !== ""){
+        var filterData = filterData.filter(data => data.city === input);
+    };
+    var input = d3.select("#state").property("value").toLowerCase();
+    if (input !== ""){
+        var filterData = filterData.filter(data => data.state === input);
+    };
+    var input = d3.select("#shape").property("value").toLowerCase();
+    if (input !== ""){
+        var filterData = filterData.filter(data => data.shape === input);
+    };
+    d3.select("tbody").selectAll("tr").remove()
+    filterData.forEach((event) => {
+        var row = tbody.append("tr");
+        Object.values(event).forEach((value) => {
+            var cell = row.append("td");
+            cell.text(value);
+        });
+    });
+});
 
 
-// function one 
-function pull_data(aliens) {
-    tbody.html("");
-    console.log(aliens);
-    aliens.forEach(function(appending) {
-        tbody.append("tr");
-        Object.entries(appending).forEach(function([key, value]) {
-            tbody.append("td").text(value);
-        })
-    })
-}
 
 
-//function two 
-function filt_data() {
-    d3.event.preventDefault();
-    var filtered_data = UFO_table;
-    // console.log("UFO Sightings");
-    var date_input = d3.select("#datetime").property("value");
-    console.log(date_input);
-    if (date_input) {
-        filtered_data = filtered_data.filter(temporary_row => temporary_row.datetime === date_input);
-    }
-    pull_data(filtered_data);
-    console.log(filtered_data);
-}
 
-pull_data(UFO_table)
 
-d3.selectAll("#filter-btn").on("click", 
+
+
+
+
 
