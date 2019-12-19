@@ -1,12 +1,4 @@
 // @TODO: YOUR CODE HERE!
-// @TODO: YOUR CODE HERE!
-
-// COPY PASTE HAIR METAL ACTIVITY 
-// CHANGE CSV 
-// CHANGE VAR HAIRDATA TO POVDATA
-// CHANGE COLUMNS TO POVERTY AND HEALTHCARE 
-// CHANGE + TO PARSEFLOAT FUNCTION
-// ADD FOLLOWING TO HTML LINES 52
 {
     /* <script src="https://d3js.org/d3.v5.min.js"></script>
             <script src="https://cdnjs.cloudflare.com/ajax/libs/d3-tip/0.7.1/d3-tip.min.js"></script>
@@ -38,7 +30,7 @@ var chartGroup = svg.append("g")
     .attr("transform", `translate(${margin.left}, ${margin.top})`);
 
 // Import Data
-d3.csv("../assets/data/data.csv").then(function(povData) {
+d3.csv("./assets/data/data.csv").then(function(povData) {
 
     // Step 1: Parse Data/Cast as numbers
     // ==============================
