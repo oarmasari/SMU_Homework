@@ -13,19 +13,19 @@
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "mapbox.satellite",
-    accessToken: "pk.eyJ1Ijoic2hhd25hZHZhbmkiLCJhIjoiY2s0NXN6N294MDlubjNmbnh1NzZsNTZ0aSJ9.G6orb01lEUAZt9pllFtLNw"
+    accessToken: ""
   });
   var darkmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "mapbox.dark",
-    accessToken: "pk.eyJ1Ijoic2hhd25hZHZhbmkiLCJhIjoiY2s0NXN6N294MDlubjNmbnh1NzZsNTZ0aSJ9.G6orb01lEUAZt9pllFtLNw"
+    accessToken: ""
   });
   var lightmap = L.tileLayer("https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.png?access_token={accessToken}", {
     attribution: "Map data &copy; <a href=\"https://www.openstreetmap.org/\">OpenStreetMap</a> contributors, <a href=\"https://creativecommons.org/licenses/by-sa/2.0/\">CC-BY-SA</a>, Imagery © <a href=\"https://www.mapbox.com/\">Mapbox</a>",
     maxZoom: 18,
     id: "mapbox.light",
-    accessToken: "pk.eyJ1Ijoic2hhd25hZHZhbmkiLCJhIjoiY2s0NXN6N294MDlubjNmbnh1NzZsNTZ0aSJ9.G6orb01lEUAZt9pllFtLNw"
+    accessToken: ""
   });
   var baseMaps = {
     "Pirate Map": pirate,
